@@ -8,92 +8,80 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class TestRadio {
 
-    @Test
-    public void snouldRadioСonditionsMax(){
-        Radio radio = new Radio();
-        int curentWale = 11;
-        int currentVolume = 11;
-        assertNull(radio.Сonditions());
-    }
 
     @Test
-    public void snouldRadioСonditionsMin(){
+    public void snouldRadioButtonNextStationOver() {
         Radio radio = new Radio();
-        int curentWale = -1;
-        int currentVolume = -1;
-        assertNull(radio.Сonditions());
-    }
-
-    @Test
-    public void snouldRadioButtonNextWaleOver(){
-        Radio radio = new Radio();
-        int curentWale = 11;
+        int currentStation = 11;
         int expected = 0;
-        int actual = radio.ButtonNextWale();
-        assertEquals(expected,actual);
+        int actual = radio.ButtonNextStation();
+        assertEquals(expected, actual);
     }
-// с этого теста все ломается
+
+
     @Test
-    public void snouldRadioButtonNextWaleNorm(){
+    public void snouldRadioButtonNextStationNorm() {
         Radio radio = new Radio();
-        int currentWales = 1;
+        int currentStation = 1;
         int expected = 2;
-        int actual = radio.ButtonNextWale();
-        assertEquals(expected,actual);
+        int actual = radio.ButtonNextStation();
+        assertEquals(expected, actual);
     }
 
 
     @Test
-    public void SnouldRadioButtonPrefWaleNorm(){
+    public void snouldRadioButtonPrefStationNorm() {
         Radio radio = new Radio();
-        int currentWale = 5;
+        int currentStation = 5;
         int expected = 4;
-        int actual = radio.ButtonPrefWale();
-        assertEquals(actual,expected);
-}
+        int actual = radio.ButtonPrefStation();
+        assertEquals(actual, expected);
+    }
 
     @Test
-    public void snouldRadioButtonPrefWaleMin(){
+    public void snouldRadioButtonPrefStationMin() {
         Radio radio = new Radio();
-        int currentWale = 0;
+        int currentStation = 0;
         int expected = 9;
-        int actual = radio.ButtonPrefWale();
-        assertEquals(actual,expected);
+        int actual = radio.ButtonPrefStation();
+        assertEquals(actual, expected);
     }
 
     @Test
-    public void snouldRadioButtonNextVoliumNorm(){
+    public void snouldRadioButtonNextVolumeNorm() {
         Radio radio = new Radio();
-        int currentVolium = 5;
+        int currentVolume = 5;
         int actual = 6;
-        int expected = radio.ButtonNextVolium();
-        assertEquals(actual,expected);
-}
+        int expected = radio.ButtonNextVolume();
+        assertEquals(actual, expected);
+    }
+
     @Test
-    public void snouldRadioButtonNextVoliumOver(){
+    public void snouldRadioButtonNextVolumeOver() {
         Radio radio = new Radio();
-        int currentVolium = 10;
+        int currentVolume = 10;
         int actual = 10;
-        int expected = radio.ButtonNextVolium();
-        assertEquals(actual,expected);
+        int expected = radio.ButtonNextVolume();
+        assertEquals(actual, expected);
     }
 
 
     @Test
-    public void snouldRadioButtonPrefVoliumMin(){
+    public void snouldRadioButtonPrefVolumeMin() {
         Radio radio = new Radio();
-        int currentVolium = 0;
+        int currentVolume = 0;
         int actual = 0;
-        int expected = radio.ButtonPrefVolium();
-        assertEquals(actual,expected);
+        int expected = radio.ButtonPrefVolume();
+        assertEquals(actual, expected);
     }
+
     @Test
-    public void snouldRadioButtonPrefVoliumNorm(){
+    public void snouldRadioButtonPrefVolumeNorm() {
         Radio radio = new Radio();
-        int currentVolium = 4;
+        int currentVolume = 4;
         int actual = 3;
-        int expected = radio.ButtonPrefVolium();
-        assertEquals(actual,expected);
+        int expected = radio.ButtonPrefVolume();
+        assertEquals(actual, expected);
     }
 
 

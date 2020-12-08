@@ -1,60 +1,94 @@
 package ru.netologi.domain;
 
 public class Radio {
-    int currentWale;
-    int currentVolume;
-    int maxVolume = 10;
-    int minVolume = 0;
-    int minWale = 0;
-    int maxWale = 9;
+    private int currentStation;
+    private int currentVolume;
+    private int maxVolume = 10;
+    private int minVolume = 0;
+    private int minStation = 0;
+    private int maxStation = 9;
 
+    public int getCurrentStation() {
+        return currentStation;
+    }
 
-public Object Сonditions(){
-    if (currentWale < minWale){
-        return null;
-    }
-    if (currentWale > maxWale){
-        return null;
-    }
-    if (currentVolume > maxVolume)
-    {
-        return null;
-    }
-    if (currentVolume < minVolume){
-        return null;
-    }
-    return null;
-}
+    public void setCurrentStation(int currentStation) {
+        this.currentStation = currentStation;
 
-public int ButtonNextWale(){
-    int currentWales = currentWale + 1;
-    if (currentWales > maxWale){
-        currentWales = 0;
     }
-    return currentWales;
-}
 
-public int ButtonPrefWale(){
-    int currentWales = currentWale - 1;
-    if (currentWales < minWale){
-        currentWale = 9;
+    public int getMinStation() {
+        return minStation;
     }
-    return currentWale;
-}
 
-public int ButtonNextVolium () {
-    int currentVolumeS = currentVolume + 1;
-    if (currentVolumeS > maxVolume) {
-        currentVolume = 10;
+    public void setMinStation(int minStation) {
+        this.minStation = minStation;
     }
-    return currentVolume;
-}
 
-    public int ButtonPrefVolium(){
-       int currentVolumes = currentVolume -1 ;
-        if (currentVolumes < minVolume){
-            currentVolume = 0;}
+    public int getMaxStation() {
+        return maxStation;
+    }
+
+    public void setMaxStation() {
+        this.maxStation = maxStation;
+    }
+
+    public int getCurrentVolume() {
         return currentVolume;
     }
 
+    public void setCurrentVolume(int currentVolume) {
+        this.currentVolume = currentVolume;
+    }
+
+    public int getMaxVolume() {
+        return maxVolume;
+    }
+
+    public void setMaxVolume(int maxVolume) {
+        this.maxVolume = maxVolume;
+    }
+
+    public int getMinVolume() {
+        return minVolume;
+    }
+
+    public void setMinVolume(int minVolume) {
+        this.minVolume = minVolume;
+    }
+
+
+    public int ButtonNextStation() {
+        int currentStations = currentStation + 1;
+        if (currentStations > maxStation) {
+            currentStations = minStation;
+        }
+        return currentStations;
+    }
+
+    public int ButtonPrefStation() {
+        int currentStations = currentStation - 1;
+        if (currentStations < minStation) {
+            currentStations = maxStation;
+        }
+        return currentStations;
+    }
+
+    public int ButtonNextVolume() {
+        int currentVolumes = currentVolume + 1;
+        if (currentVolumes > maxVolume) {
+            currentVolumes = maxVolume;
+        }
+        return currentVolumes;
+    }
+
+    public int ButtonPrefVolume() {
+        int currentVolumes = currentVolume - 1;
+        if (currentVolumes < minVolume) {
+            currentVolumes = minVolume;
+        }
+        return currentVolumes;
+    }
+
 }
+
