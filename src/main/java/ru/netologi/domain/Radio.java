@@ -58,7 +58,7 @@ public class Radio {
     }
 
 
-    public int ButtonNextStation() {
+    public int buttonNextStation() {
         int currentStations = currentStation + 1;
         if (currentStations > maxStation) {
             currentStations = minStation;
@@ -66,7 +66,7 @@ public class Radio {
         return currentStations;
     }
 
-    public int ButtonPrefStation() {
+    public int buttonPrefStation() {
         int currentStations = currentStation - 1;
         if (currentStations < minStation) {
             currentStations = maxStation;
@@ -74,7 +74,7 @@ public class Radio {
         return currentStations;
     }
 
-    public int ButtonNextVolume() {
+    public int buttonNextVolume() {
         int currentVolumes = currentVolume + 1;
         if (currentVolumes > maxVolume) {
             currentVolumes = maxVolume;
@@ -82,7 +82,7 @@ public class Radio {
         return currentVolumes;
     }
 
-    public int ButtonPrefVolume() {
+    public int buttonPrefVolume() {
         int currentVolumes = currentVolume - 1;
         if (currentVolumes < minVolume) {
             currentVolumes = minVolume;

@@ -14,7 +14,7 @@ public class TestRadio {
         Radio radio = new Radio();
         int currentStation = 11;
         int expected = 0;
-        int actual = radio.ButtonNextStation();
+        int actual = radio.buttonNextStation();
         assertEquals(expected, actual);
     }
 
@@ -24,7 +24,7 @@ public class TestRadio {
         Radio radio = new Radio();
         int currentStation = 1;
         int expected = 2;
-        int actual = radio.ButtonNextStation();
+        int actual = radio.buttonNextStation();
         assertEquals(expected, actual);
     }
 
@@ -34,7 +34,7 @@ public class TestRadio {
         Radio radio = new Radio();
         int currentStation = 5;
         int expected = 4;
-        int actual = radio.ButtonPrefStation();
+        int actual = radio.buttonPrefStation();
         assertEquals(actual, expected);
     }
 
@@ -43,7 +43,7 @@ public class TestRadio {
         Radio radio = new Radio();
         int currentStation = 0;
         int expected = 9;
-        int actual = radio.ButtonPrefStation();
+        int actual = radio.buttonPrefStation();
         assertEquals(actual, expected);
     }
 
@@ -52,7 +52,7 @@ public class TestRadio {
         Radio radio = new Radio();
         int currentVolume = 5;
         int actual = 6;
-        int expected = radio.ButtonNextVolume();
+        int expected = radio.buttonNextVolume();
         assertEquals(actual, expected);
     }
 
@@ -61,7 +61,7 @@ public class TestRadio {
         Radio radio = new Radio();
         int currentVolume = 10;
         int actual = 10;
-        int expected = radio.ButtonNextVolume();
+        int expected = radio.buttonNextVolume();
         assertEquals(actual, expected);
     }
 
@@ -71,7 +71,7 @@ public class TestRadio {
         Radio radio = new Radio();
         int currentVolume = 0;
         int actual = 0;
-        int expected = radio.ButtonPrefVolume();
+        int expected = radio.buttonPrefVolume();
         assertEquals(actual, expected);
     }
 
@@ -80,7 +80,7 @@ public class TestRadio {
         Radio radio = new Radio();
         int currentVolume = 4;
         int actual = 3;
-        int expected = radio.ButtonPrefVolume();
+        int expected = radio.buttonPrefVolume();
         assertEquals(actual, expected);
     }
 
