@@ -65,6 +65,8 @@
                                         <counter>BRANCH</counter>
                                         <value>COVEREDRATIO</value>
                                         <minimum>100%</minimum>
+                                        after_success:
+                                        - bash <(curl -s https://codecov.io/bash)
                                     </limit>
                                 </limits>
                             </rule>

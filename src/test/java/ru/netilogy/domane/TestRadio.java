@@ -1,7 +1,7 @@
-package ru.netilogi.domane;
+package ru.netilogy.domane;
 
 import org.junit.jupiter.api.Test;
-import ru.netologi.domain.Radio;
+import ru.netology.domain.Radio;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
@@ -30,20 +30,20 @@ public class TestRadio {
 
 
     @Test
-    public void snouldRadioButtonPrefStationNorm() {
+    public void snouldRadioButtonPrevStationNorm() {
         Radio radio = new Radio();
         radio.setCurrentStation(5);
         int expected = 4;
-        int actual = radio.buttonPrefStation();
+        int actual = radio.buttonPrevStation();
         assertEquals(actual, expected);
     }
 
     @Test
-    public void snouldRadioButtonPrefStationMin() {
+    public void snouldRadioButtonPrevStationMin() {
         Radio radio = new Radio();
         radio.setCurrentStation(0);
         int expected = 9;
-        int actual = radio.buttonPrefStation();
+        int actual = radio.buttonPrevStation();
         assertEquals(actual, expected);
     }
 
@@ -67,20 +67,20 @@ public class TestRadio {
 
 
     @Test
-    public void snouldRadioButtonPrefVolumeMin() {
+    public void snouldRadioButtonPrevVolumeMin() {
         Radio radio = new Radio();
         radio.setCurrentVolume(0);
         int actual = 0;
-        int expected = radio.buttonPrefVolume();
+        int expected = radio.buttonPrevVolume();
         assertEquals(actual, expected);
     }
 
     @Test
-    public void snouldRadioButtonPrefVolumeNorm() {
+    public void snouldRadioButtonPrevVolumeNorm() {
         Radio radio = new Radio();
         radio.setCurrentVolume(4);
         int actual = 3;
-        int expected = radio.buttonPrefVolume();
+        int expected = radio.buttonPrevVolume();
         assertEquals(actual, expected);
     }
 

@@ -1,4 +1,4 @@
-package ru.netologi.domain;
+package ru.netology.domain;
 
 public class Radio {
     private int currentStation;
@@ -66,7 +66,7 @@ public class Radio {
         return currentStations;
     }
 
-    public int buttonPrefStation() {
+    public int buttonPrevStation() {
         int currentStations = currentStation - 1;
         if (currentStations < minStation) {
             currentStations = maxStation;
@@ -82,7 +82,7 @@ public class Radio {
         return currentVolumes;
     }
 
-    public int buttonPrefVolume() {
+    public int buttonPrevVolume() {
         int currentVolumes = currentVolume - 1;
         if (currentVolumes < minVolume) {
             currentVolumes = minVolume;
