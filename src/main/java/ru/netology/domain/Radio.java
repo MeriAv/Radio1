@@ -61,6 +61,15 @@ public class Radio {
     }
 
 
+    public Radio(int quantityStation, int currentStation) {
+        this.quantityStation = quantityStation;
+        this.currentStation = currentStation;
+    }
+
+    public Radio(int currentVolume) {
+        this.currentVolume = currentVolume;
+    }
+
     public int buttonNextStation() {
         int currentStations = currentStation + 1;
         if (currentStations > quantityStation) {
