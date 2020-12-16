@@ -20,10 +20,21 @@ public class TestRadio {
 
 
     @Test
-    public void snouldRadioButtonNextStationNorm() {
+    public void snouldRadioButtonNextStationNormQuantity10() {
         Radio radio = new Radio();
         radio.setCurrentStation(1);
+        radio.setQuantityStation(10);
         int expected = 2;
+        int actual = radio.buttonNextStation();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void snouldRadioButtonNextStationQuantity0() {
+        Radio radio = new Radio();
+        radio.setCurrentStation(3);
+        radio.setQuantityStation(2);
+        int expected = 0;
         int actual = radio.buttonNextStation();
         assertEquals(expected, actual);
     }
@@ -33,6 +44,7 @@ public class TestRadio {
     public void snouldRadioButtonPrevStationNorm() {
         Radio radio = new Radio();
         radio.setCurrentStation(5);
+        radio.setQuantityStation(20);
         int expected = 4;
         int actual = radio.buttonPrevStation();
         assertEquals(actual, expected);
@@ -42,7 +54,8 @@ public class TestRadio {
     public void snouldRadioButtonPrevStationMin() {
         Radio radio = new Radio();
         radio.setCurrentStation(0);
-        int expected = 9;
+        radio.setQuantityStation(2);
+        int expected = 2;
         int actual = radio.buttonPrevStation();
         assertEquals(actual, expected);
     }
@@ -60,7 +73,7 @@ public class TestRadio {
     public void snouldRadioButtonNextVolumeOver() {
         Radio radio = new Radio();
         radio.setCurrentVolume(10);
-        int actual = 10;
+        int actual = 11;
         int expected = radio.buttonNextVolume();
         assertEquals(actual, expected);
     }
